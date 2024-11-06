@@ -1,0 +1,27 @@
+.spooky-container {
+  position: relative;
+  display: inline-block;
+}
+
+.spooky-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 9999;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  animation: float 3s ease-in-out infinite;
+  opacity: 0.85;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -60%);
+  }
+}
